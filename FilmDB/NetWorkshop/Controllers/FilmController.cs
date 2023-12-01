@@ -13,15 +13,30 @@ namespace FilmDB.Controllers
         }
         public IActionResult Index()
         {
-            var film = new Film()
-            {
-                ID = 2,
-                Title = "Uwolnić orkę",
-                Year = 1993
-            };
+            var films = _manager.GetFilms();
+            return View(films);
+        }
 
-            _manager.AddFilm(film);
+        [HttpGet]
+        public IActionResult Add()
+        {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Add(Film film)
+        {
+            try
+            {
+                _manager.AddFilm(film);
+                return RedirectToAction("Index");
+            }
+            catch (Exception)
+            {
+
+                return View(film);
+            }
+
         }
     }
 }

@@ -40,11 +40,21 @@ namespace FilmDB.Repositories
 
         public FilmManager UpdateFilm(Film film)
         {
+            _context.Update(film);
+            _context.SaveChanges();
             return this;
         }
 
         public FilmManager ChangeTitle(int id, string newTitle)
         {
+            var updateFilm = GetFilm(id);
+            if (String.IsNullOrEmpty(newTitle)) 
+            {
+                newTitle = "Brak tytułu";
+            }
+
+            updateFilm.Title = newTitle;
+            _context.SaveChanges();
             return this;
         }
 
@@ -55,7 +65,7 @@ namespace FilmDB.Repositories
 
         public List<Film> GetFilms()
         {
-            return null;
+            return _context.Films.ToList();
         }
     }
 }
