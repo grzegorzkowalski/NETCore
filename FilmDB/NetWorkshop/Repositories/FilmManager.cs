@@ -35,6 +35,7 @@ namespace FilmDB.Repositories
         {
             var filmToDelete = GetFilm(id);
             _context.Films.Remove(filmToDelete);
+            _context.SaveChanges();
             return this;
         }
 

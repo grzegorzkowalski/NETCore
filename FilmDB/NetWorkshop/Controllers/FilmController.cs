@@ -38,5 +38,42 @@ namespace FilmDB.Controllers
             }
 
         }
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            var editFilm = _manager.GetFilm(id);
+            return View(editFilm);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Film film)
+        {
+            try
+            {
+                _manager.UpdateFilm(film);
+                return RedirectToAction("Index");
+            }
+            catch (Exception)
+            {
+
+                return View(film);
+            }
+        }
+
+        [HttpGet]
+        public IActionResult RemoveFilm(int id) 
+        {
+            var deleteFilm = _manager.GetFilm(id);
+            return View(deleteFilm);
+        }
+
+        [HttpPost]
+        public IActionResult Remove(int id)
+        {
+            var deleteItem = _manager.GetFilm(id);
+            _manager.RemoveFilm(id);
+            return RedirectToAction("Index");
+        }
     }
 }
