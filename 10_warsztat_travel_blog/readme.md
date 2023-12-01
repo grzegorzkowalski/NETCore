@@ -13,7 +13,7 @@
 ####  Zadanie 2
 1. Otwórz `projekt_statyczny` i zapoznaj się z jego wyglądem i budową.
 1. Zmień budowę layoutu aplikacji `TravelBlog`. Zaimplementuj kod html w pliku `_Layout.cshtml`. Style, obrazki umieść w odpowiednich miejscach w folderze `wwwroot`. Pamiętaj o dodaniu wszystkich zasobów, takich jak style, fonty, pliki graficzne.
-1. Menu apikacji zamień na partial i dodaj do layoutu.
+1. Menu aplikacji zamień na partial i dodaj do layoutu.
 1. Aplikację podzielimy na następujące podstrony:
 	1. Strona główna
 	1. Aktualności
@@ -38,7 +38,7 @@
 1. Po przesłaniu poprawnie formularza, ukryj formularz i wyświetl informację, że formularz został wysłany poprawnie i niedługo odpowiemy.
 
 ####  Zadanie 4
-1. Stwórz nową strefę o nazwie `CMS`.
+1. Stwórz nowy kontroler o nazwie `CMS`.
 1. Stwórz model `GalleryItem`, który będzie reprezentował pojedyńczy element galerii.
 1. Dodaj model do klasy contextu.
 1. Zrób migrację i aktualizację bazy danych.
