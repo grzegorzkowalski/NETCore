@@ -28,6 +28,9 @@
 1. Dodaj do niej treści.
 1. Stwórz stronę `Galeria`.
 1. Dodaj do niej treści.
+
+#### Uwaga w wersji alternatywnej w odpowiedzi na wasze potrzeby zamiast używać podejścia Code First, proszę użyć podejścia Database first.
+W pliku sample.sql dodany jest kod wykorzystywany w prezentacji. Może stanowić podstawę do napisania swojej bazy.
 		
 ####  Zadanie 3
 1. Stwórz folder `Models`.
@@ -44,6 +47,6 @@
 1. Zrób migrację i aktualizację bazy danych.
 1. Stwórz odpowiednie podstrony do dodawania, edycji, usuwania, wyświetlania pojedyńczego elementu galerii jak i listy. 
 1. Dodaj asynchroniczne repozytorium do obsługi podstawowych operacji crudowych.
-1. Zmodyfikuj widok `Galeria`, żeby wykorzystywał listę elementów galerii dodanych dynamicznie.  
+1. Zmodyfikuj widok `Galeria`, żeby wykorzystywał listę elementów galerii dodanych dynamicznie.
 
   		   
